@@ -11,7 +11,7 @@ class BirthdayForm extends Component {
 		return (
 				<div>
 					<h1>Birthday Form Component</h1>
-					<DatePicker>
+					<DatePicker />
 				</div>
 			)
 
