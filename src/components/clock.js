@@ -39,6 +39,8 @@ class Clock extends Component {
       else if (birthDay < currentDay) {
       //2. day is b4 the current day
       bday.setFullYear(today.getFullYear() + 1);
+    } else if (birthDay == currentDay) {
+      return 0
     }
   }
 
@@ -84,15 +86,22 @@ class Clock extends Component {
 
     return (
       <div>
-        <div>
-          <div>DAYS {data.days}</div>
-          <div>HRS {data.hours}</div>
-          <div>MINS {data.minutes}</div>
-          <div>SECS {data.seconds}</div>
-        </div>
-        <div>
-          {<h4>remaining until you are {this.getAge()}</h4>}
-        </div>
+      {
+        this.state.timeRemaining == 0 ?
+            <h1>Happy Birthday!</h1>
+            :
+            <div>
+              <div>
+                <div>DAYS {data.days}</div>
+                <div>HRS {data.hours}</div>
+                <div>MINS {data.minutes}</div>
+                <div>SECS {data.seconds}</div>
+              </div>
+              <div>
+                {<h4>remaining until you are {this.getAge()}</h4>}
+              </div>
+            </div>
+      }
       </div>
     )
   }
