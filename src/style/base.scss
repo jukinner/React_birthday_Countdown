@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--montserrat);
+}
+
+:root {
+   --montserrat: 'Montserrat', sans-serif;
+   --roboto: 'Roboto Condensed', sans-serif;
+   --roboto-condensed: 'Roboto', sans-serif;
+
+   --blue-primary: #518bde;
+   --blue-secondary: #5EA0E9;
+   --gray-primary: #444444;
+   --gray-secondary: #A3ABB2;
+   --yellow-primary: #E3B924;
+   --yellow-secondary: #F7D754;
+   --gray-tertiary: rgb(229, 229, 229);
+ }
