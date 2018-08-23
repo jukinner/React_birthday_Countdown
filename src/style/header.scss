@@ -1,0 +1,25 @@
+h1 {
+  color:white;
+  padding: 75px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 22px;
+  z-index: 10;
+  position: absolute;
+  //position absolute ignores other elements and puts it over what is there. 
+}
+
+@mixin header-background($color: var(--blue-primary), $clip-path:polygon(0 100%, 0 0, 50% 0, 16% 100%)) {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color;
+  clip-path: $clip-path;
+}
+
+.header_skew {
+  @include header-background;
+}
+
+.header_subskew {
+  @include header-background(var(--blue-secondary), $clip-path: polygon(0 100%, 0 0, 0 40%, 16% 100%));
+}
