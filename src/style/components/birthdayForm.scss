@@ -1,9 +1,9 @@
 .birthday-container {
   @include center-item($pull-x: -50%, $pull-y: -50%, $top: 50%, $left: 50%);
-  
 }
 
 .date-picker-container {
+  @include center-item($pull-x: -15%, $pull-y: -50%, $top: 0%, $left: 0%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,4 +13,24 @@
 .clock-container {
   width: 100vw;
   height: 100vw;
+}
+
+.date-picker {
+  border: none;
+  border-bottom: 1px solid var(--yellow-primary);
+  text-align: center;
+  font-size: 75px;
+  background-color: transparent;
+  padding: 35px 0;
+  color: var(--gray-primary);
+  font-weight: bold;
+  font-family: var(--roboto-condensed);
+  transition: all .3s;
+
+  &:focus {
+    border-bottom: 5px solid var(--blue-secondary);
+    outline: none;
+    padding: 0;
+  }
+
 }
