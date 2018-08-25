@@ -35,12 +35,6 @@
 
 //
 
-@mixin center-item($pull-x: -50%, $pull-y: -50%, $top: 50%, $left: 50%) {
-  position: absolute;
-  top: $top;
-  left: $left;
-  transform: translate($pull-x, $pull-y);
-}
 
 .message-container {
   @include clock-dimensions;
@@ -78,4 +72,8 @@ ul p {
   color: white;
   font-size: 90px;
   line-height: 115px;
+}
+
+.until-container {
+  @include center-item($top: 85%, $left: 50%);
 }
