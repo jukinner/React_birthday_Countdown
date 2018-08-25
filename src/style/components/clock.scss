@@ -35,32 +35,32 @@
 
 //
 
+@mixin center-item($pull-x: -50%, $pull-y: -50%, $top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($pull-x, $pull-y);
+}
+
 .message-container {
   @include clock-dimensions;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
+  @include center-item($pull-y: 0%);
   margin-top: 20px;
 }
 
 .message-container_title {
+  @include center-item($pull-x: 0%, $pull-y: 0,$top: 5%, $left: 10%);
   font-family: var(--roboto-condensed);
   color: var(--yellow-secondary);
   font-size: 22px;
-  position: absolute;
-  left: 10%;
-  top: 5%;
 }
 
 .message-container_message {
   font-family: var(--roboto-condensed);
   font-size: 90px;
-  font-weight: bold;
-  position: absolute;
-  left: 10%;
-  bottom: 5%;
+
   width: 100%;
+  @include center-item($pull-x: 0, $pull-y: 0,$top: 15%, $left: 10%);
 }
 
 ul {
