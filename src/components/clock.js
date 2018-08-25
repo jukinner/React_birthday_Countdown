@@ -99,7 +99,10 @@ class Clock extends Component {
       <div className="countdown">
       {
         this.state.timeRemaining == 0 ?
-            <h1>Happy Birthday!</h1>
+        <div className='message-container'>
+            <p className='message-container_title'>Countdown Complete!</p>
+            <p className='message-container_message'>HAPPY BIRTHDAY!</p>
+        </div>
             :
             <div>
               <div>
