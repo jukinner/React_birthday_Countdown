@@ -39,7 +39,7 @@ class BirthdayForm extends Component {
 
 	render() {
 		return (
-				<form onSubmin={this.handleGenerate} className="birthday-container">
+				<form onSubmit={this.handleGenerate} className="birthday-container">
 				{
 					this.state.formCompleted ? 
 					<div className="clock-container">
